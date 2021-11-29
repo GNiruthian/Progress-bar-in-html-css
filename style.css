@@ -1,0 +1,58 @@
+html,
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: sans-serif;
+    background: aqua;
+    overflow: hidden;
+}
+
+.outer {
+    height: 300px;
+    width: 300px;
+    background: linear-gradient(135deg, #FE6A50 5%, #ED00AA 15%, #2FE3FE 50%, #8900FF 100%);
+    border-radius: 50%;
+}
+
+.inner {
+    position: absolute;
+    width: 275px;
+    height: 275px;
+    text-align: center;
+    line-height: 275px;
+    background: aqua;
+    border-radius: 50%;
+    cursor: default;
+    /* opacity: 0; */
+}
+
+.inner span {
+    font-size: 60px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #FE6A50 5%, #ED00AA 15%, #2FE3FE 50%, #8900FF 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-size: 300%;
+}
+
+.outer.active-loader {
+    animation: rotate 2s ease infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.outer.active-loader-2 {
+    animation: rotate2 5s ease;
+}
+
+@keyframes rotate2 {
+    to {
+        transform: rotate(360deg);
+    }
+}
